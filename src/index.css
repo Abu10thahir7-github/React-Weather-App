@@ -85,9 +85,11 @@ img {
 
 .app .descri {
   position: relative;
+  top: 190px;
   right: -90%;
   transform-origin: 0 0;
   transform: rotate(270deg);
+
 }
 
 .app .bottom {
