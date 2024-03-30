@@ -71,6 +71,7 @@ function App() {
           <div className="top">
             <div className="location">
               <p>{weatherData.name}</p>
+               <p>{weatherData.sys.country}</p>
             </div>
             <div className="temp">
               <h1>{weatherData.main.temp}&deg;C</h1>
@@ -87,6 +88,7 @@ function App() {
               <div className="time">
                 <p>{currentTime}</p>
               </div>
+              
             </div>
             <div className="right">
               <div className="imgData">

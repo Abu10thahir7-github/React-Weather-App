@@ -104,7 +104,10 @@ img {
 .bold {
   font-weight: 700;
 }
-
+.location{
+  display: flex;
+  gap: 20px;
+}
 .app .search {
   display: flex;
   justify-content: center;
