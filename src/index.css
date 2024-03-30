@@ -1,13 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Muli', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+
+.app::before {
+  content: '';
+  background: url('./assets/bg.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+button {
+  padding: 7px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.681);
+  color: black;
+}
+
+.container {
+  max-width: 1000px;
+  height: 500px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 2px gray;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+img {
+
+  width: 220px !important;
+  height: auto;
+
+}
+
+.app .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.app .descri {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.338);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.app .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.app input {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 1.2rem;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bottom p {
+  font-size: 20px;
+
+}
+
+::placeholder {
+  color: #ffffff50;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+}
+
+.error-message p {
+
+  padding: 20px;
+  width: 290px;
+  text-align: center;
+  border-radius: 25px;
+  background: #ff00003b;
+}
+
+.error-message {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+    
+  }
+}
+
+.container {
+  animation: slideIn1 0.1s ease-in-out;
+
+}
+
+@keyframes slideIn1 {
+  from {
+    background: transparent;
+  }
+
+  to {}
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .container {
+    width: auto;
+    margin-inline: 5px;
+  }
+
+}
+
+.mid {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 98%;
+  height: 100%;
+}
+
+.left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width : 600px) {
+  img {
+    width: 100px !important;
+    height: auto
+  }
+}
+
+@media only screen and (max-width : 350px) {
+  .descri {
+    display: none;
+  }
+
+  .mid {
+    margin: -13px;
+
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .mid {
+    display: flex;
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
